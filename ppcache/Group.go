@@ -27,6 +27,10 @@ func NewGroup(cacheSize int, getter func(key string) (value []byte, err error)) 
 
 }
 
+func (g *CacheGroup) SetGetter(getter func(key string) (value []byte, err error)) {
+	g.getter = getter
+}
+
 func (g *CacheGroup) Get(key string) (ByteView, error) {
 
 	if v, err := g.main.get(key); err == nil {
