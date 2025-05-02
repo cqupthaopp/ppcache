@@ -7,7 +7,7 @@ import (
 )
 
 /*
-Easy Example
+简单测试一下
 */
 
 func getter(key string) ([]byte, error) {
